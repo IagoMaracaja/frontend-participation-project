@@ -9,13 +9,22 @@ const { SpecReporter } = require('jasmine-spec-reporter');
  */
 exports.config = {
   allScriptsTimeout: 11000,
+  seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
-  capabilities: {
-    browserName: 'chrome'
+  suites: {
+      main:'./src/specs/user/**/*spec.ts'
   },
-  directConnect: true,
+  capabilities: {
+    browserName: 'chrome',
+      chromeOptions: {
+        args: [
+          '--start-maximized'
+        ]
+      }
+  },
+  directConnect: false,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
@@ -26,6 +35,9 @@ exports.config = {
   onPrepare() {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.json')
+    });
+    browser.getCapabilities().then(function (caps) {
+      browser.browserName = caps.get('browserName');
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }

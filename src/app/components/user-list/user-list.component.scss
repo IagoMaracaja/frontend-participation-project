@@ -1,0 +1,94 @@
+$input-border-color: rgba(31, 31, 31, 0);
+$background-card-color: #00B8E2;
+$btn-background-color: #00B8E2;
+$btn-border-color: #fafbfc;
+$btn-text-color: #fafbfc;
+
+$btn-background-color-active: #0a8eae;
+$btn-border-color-active:#D8D8D8;
+
+$btn-background-colo-hover: #12c6ea;
+$btn-border-color-hover: #e9e6e6;
+
+.input {
+  border: 1px solid $input-border-color;
+  width: 100%;
+  height: 31px;
+  padding: 5px;
+}
+
+.card {
+  background: $background-card-color;
+  width: 100%;
+  padding: 1% 25%;
+}
+
+.title {
+  margin: 20px;
+}
+.input-box {
+  margin:10px;
+}
+.table-wd{
+  width: 100%!important;
+}
+
+.data-card {
+  padding: 20px;
+}
+
+.no-data{
+  font-weight: bolder;
+  text-align: center;
+}
+
+.user-btn-primary {
+  background-color: $btn-background-color;
+  border-color: $btn-border-color;
+  color: $btn-text-color;
+}
+
+.user-btn-primary:hover {
+  background-color: $btn-background-colo-hover;
+  border-color: $btn-border-color-hover;
+  color: $btn-border-color-hover;
+  text-decoration: none;
+}
+
+.user-btn-primary:active {
+  background-color: $btn-background-color-active;
+  border-color: $btn-border-color-active;
+}
+.form-error-feedback {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  font-weight: bold;
+  color: #220a0a;
+}
+
+.action-column {
+  width: 7%;
+  min-width: 100px;
+}
+
+.separator {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -15px;
+}
+.btn-delete {
+  background-color: transparent;
+  background-image: url('src/assets/icons/delete.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.edit:hover { background-color: #f8f8f8; }
+
+.center-text {
+  text-align: center;
+}

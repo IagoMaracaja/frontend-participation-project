@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~9.0.6",
     "@angular/platform-browser-dynamic": "~9.0.6",
     "@angular/router": "~9.0.6",
-    "apexcharts": "^3.18.1",
+    "apexcharts": "^3.24.0",
     "bootstrap": "^4.5.0",
     "ng-apexcharts": "^1.2.3",
     "ngx-toastr": "^13.0.0",
